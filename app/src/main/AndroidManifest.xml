@@ -19,17 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecordPage" />
+        <activity android:name=".TanitimScreen" />
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".loginActivity" >
-
-        </activity>
+        <activity android:name=".RecordPage" />
+        <activity android:name=".loginActivity" />
         <activity
             android:name=".FirstScreen"
             android:label="@string/title_activity_first_screen">
 
         </activity>
-        <activity android:name=".TanitimScreen"></activity>
+        <activity android:name=".Kullanici_list"></activity>
     </application>
 
 </manifest>

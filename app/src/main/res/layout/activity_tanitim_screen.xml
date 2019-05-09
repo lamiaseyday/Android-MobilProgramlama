@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:orientation="vertical"
     tools:context=".TanitimScreen">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="168dp"
+        android:src="@drawable/giris"
         android:layout_height="139dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        app:srcCompat="@drawable/giris" />
-
-    <TextView
-        android:id="@+id/textViewAdSoyad"
-        android:layout_width="161dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="163dp"
-        android:textSize="25dp"
-        android:layout_alignLeft="@+id/imageView4"
-        android:layout_marginLeft="4dp" />
-
-    <Button
-        android:id="@+id/btnKesif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
-        android:text="KEŞFET"
-        android:onClick="Kesfet"
-        tools:ignore="OnClick" />
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="58dp" />
 
     <TextView
         android:id="@+id/txtHosgeldin"
-        android:layout_width="160dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/btnKesif"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="-40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="HOŞGELDİN"
-        android:textAllCaps="false"
-        android:layout_marginLeft="-40dp"
+        android:textSize="45dp"
+        android:textColor="@color/colorLacivert"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textViewAdSoyad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnKesif"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="Keşfet"
+        android:layout_marginTop="75dp"
         android:textSize="25dp"
-        android:layout_alignLeft="@+id/btnKesif" />
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:textColor="@color/colorLacivert"
+        android:background="@color/colorWhite"
+        android:onClick="Kesfet"
+        tools:ignore="OnClick"/>
+
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.eyda.lsy1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import static android.app.PendingIntent.getActivity;
 
 public class RecordPage extends AppCompatActivity {
 
@@ -94,5 +97,16 @@ public class RecordPage extends AppCompatActivity {
         btnKaydol = findViewById(R.id.buttonKaydol);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        // Çalışmasını istediğiniz kodu buraya yazacağız
+
+        Intent i = new Intent(RecordPage.this, WelcomeActivity.class);
+        startActivity(i);
+        finish();
+        super.onBackPressed();
+
+    }
 
 }

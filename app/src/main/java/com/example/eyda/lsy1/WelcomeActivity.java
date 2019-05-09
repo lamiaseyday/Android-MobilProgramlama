@@ -30,4 +30,5 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
 }

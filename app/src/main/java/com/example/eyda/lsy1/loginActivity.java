@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class loginActivity extends AppCompatActivity {
 
-    EditText lgnUsername, lgnPasswd;
+    EditText lgnUsername, lgnPasswd, edtLgnAdi;
     Button btnLgn;
     private FirebaseAuth mAuth;
 
@@ -28,6 +28,7 @@ public class loginActivity extends AppCompatActivity {
         init();
 
         mAuth = FirebaseAuth.getInstance();//firebase nesnelerini alıyoruz
+
 
 
     }
@@ -58,7 +59,7 @@ public class loginActivity extends AppCompatActivity {
                                 startActivity(i);
 
                                 Intent in = new Intent(loginActivity.this, TanitimScreen.class);
-                                in.putExtra("veri",lgnUsername.getText().toString());
+                                in.putExtra("veri",edtLgnAdi.getText().toString());
                                 startActivity(in);
                                 finish();
                             } else {
@@ -81,6 +82,16 @@ public class loginActivity extends AppCompatActivity {
         lgnUsername = findViewById(R.id.editloginKullanici);
         lgnPasswd = findViewById(R.id.editLoginPassword);
         btnLgn = findViewById(R.id.buttonLoginKaydol);
+        edtLgnAdi = findViewById(R.id.editloginAdi);
+
+    }
+    @Override
+    public void onBackPressed() {
+        // Çalışmasını istediğiniz kodu buraya yazacağız
+        super.onBackPressed();
+        Intent i = new Intent(loginActivity.this, WelcomeActivity.class);
+        startActivity(i);
+        finish();
 
     }
 }
